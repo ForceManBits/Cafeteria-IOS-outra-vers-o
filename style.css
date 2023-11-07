@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap:break-word ;
+}
+
+h1, h2{
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background: #2a0755;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 25px;
+    animation: deez  5s ease-in-out;
+    animation-timeline: view();
+    animation-range:cover 0 cover 40%;
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+section.modulo h2{
+margin-bottom: 30px;
+font-size: 30px;
+letter-spacing: .5em;
+text-align: center;
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: #2a0755;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    overflow: hidden;
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+color: #fff;
+text-shadow: 7px 7px 7px rgb(19, 17, 17);
+text-align: center;
+font-size: 75px;
+z-index: 100;
+}
+
+section.modulo.parallax:after{
+    content:"";
+    height:100%;
+    width:100%;
+    position:absolute;
+    z-index: 10;
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 0, rgb(0,0,0,0) 85%, #0c0000  100%);
+
+}
+
+
+
+
+
+section.modulo.parallax-1{
+background-image: url("https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=1484&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+}
+section.modulo.parallax-2{
+background-image: url("https://cdn.pixabay.com/photo/2020/10/12/15/55/coffee-5649213_1280.jpg");
+}
+section.modulo.parallax-3{
+background-image: url("https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+}
+
+/* Animação momento */
+
+@keyframes deez {
+    from{
+        translate:-100vw 0;
+        color:rgb(255, 32, 32);
+        opacity:0;
+    }
+
+    to{
+        translate:0 0;
+        color: rgb(186, 0, 0);
+        opacity:100%;
+    }
+}
+
+
+@media all and (max-width:860px){
+
+    section.modulo.parallax h1{
+        color: #fff;
+        text-shadow: 5px 5px 5px rgb(19, 17, 17);
+        text-align: center;
+        font-size: 2.5em;
+        z-index: 100;
+        }
+
+
+        section.modulo p{
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 0.75em;
+        }
+
+        section.modulo.content{
+            width:90%;
+            
+
+
+        }
+
+        section.modulo h2{
+            margin-bottom: 10px;
+            font-size: 15px;
+            text-align: center;
+            }
+
+            section.modulo.parallax-1{
+                background-image: url("https://img.lovepik.com/background/20211030/medium/lovepik-coffee-concept-mobile-phone-wallpaper-background-image_400463009.jpg")
+                }
+
+
+}
